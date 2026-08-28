@@ -8,7 +8,7 @@ use Filament\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Table;
-use Filament\Tables\Actions\DeleteAction;
+use Filament\Actions\DeleteAction;
 
 class RoomsTable
 {
