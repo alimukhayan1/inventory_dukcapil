@@ -18,7 +18,15 @@ class RoomResource extends Resource
 {
     protected static ?string $model = Room::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBuildingOffice;
+    
+    protected static ?string $modelLabel = 'Ruangan';
+    
+    protected static ?string $pluralModelLabel = 'Daftar Ruangan';
+
+    protected static \UnitEnum|string|null $navigationGroup = 'Master Data';
+
+    protected static ?int $navigationSort = 2;
 
     public static function form(Schema $schema): Schema
     {
@@ -28,13 +36,6 @@ class RoomResource extends Resource
     public static function table(Table $table): Table
     {
         return RoomsTable::configure($table);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
     }
 
     public static function getPages(): array
